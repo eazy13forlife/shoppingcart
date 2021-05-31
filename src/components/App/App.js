@@ -1,8 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
+import image from "../../images/maxwell-nelson-NGWwHZeHNVE-unsplash-2.jpg";
+import "./App.scss";
 
 const App = () => {
-  return <p>Hey</p>;
+  return null;
 };
 
 export default App;
