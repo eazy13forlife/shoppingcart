@@ -61,3 +61,118 @@ import pg5Right from "./images/pg5/right.png";
 import zion1Front from "./images/zion1/front.png";
 import zion1Main from "./images/zion1/main.png";
 import zion1Right from "./images/zion1/right.png";
+
+const inventory = [
+  {
+    name: "Nike Air Force 1 Crater FlyKnit",
+    price: 110,
+    imgFront: airForceFront,
+    imgMain: airForceMain,
+    imgRight: airForceRight,
+  },
+  {
+    name: "Air Jordan 1 Mid",
+    price: 115,
+    imgFront: airJordanFront,
+    imgMain: airJordanMain,
+    imgRight: airJordanRight,
+  },
+  {
+    name: "Nike Air Max Plus",
+    price: 160,
+    imgFront: airMaxFront,
+    imgMain: airMaxMain,
+    imgRight: airMaxRight,
+  },
+  {
+    name: "Nike Air Zoom Tempo NEXT%",
+    price: 200,
+    imgFront: airZoomFront,
+    imgMain: airZoomMain,
+    imgRight: airZoomRight,
+  },
+  {
+    name: "Jordan MA2",
+    price: 125,
+    imgFront: jordanMaFront,
+    imgMain: jordanMaMain,
+    imgRight: jordanMaRight,
+  },
+  {
+    name: "Jordan 4 G NRG",
+    price: 200,
+    imgFront: jordan4gFront,
+    imgMain: jordan4gMain,
+    imgRight: jordan4gRight,
+  },
+  {
+    name: "KD14",
+    price: 150,
+    imgFront: kd14Front,
+    imgMain: kd14Main,
+    imgRight: kd14Right,
+  },
+  {
+    name: "Nike Air Max 90 Exeter Edition",
+    price: 130,
+    imgFront: airMax90Front,
+    imgMain: airMax90Main,
+    imgRight: airMax90Right,
+  },
+  {
+    name: "Nike Air Raid",
+    price: 140,
+    imgFront: airRaidFront,
+    imgMain: airRaidMain,
+    imgRight: airRaidRight,
+  },
+  {
+    name: "Nike Air Vapormax Evo",
+    price: 200,
+    imgFront: airVaporFront,
+    imgMain: airVaporMain,
+    imgRight: airVaporRight,
+  },
+  {
+    name: "Nike Crater Impact",
+    price: 100,
+    imgFront: craterImpactFront,
+    imgMain: craterImpactMain,
+    imgRight: craterImpactRight,
+  },
+  {
+    name: "Nike Pegasus Trail 2",
+    price: 130,
+    imgFront: pegasusFront,
+    imgMain: pegasusMain,
+    imgRight: pegasusRight,
+  },
+  {
+    name: "Nike SB Zoom Blazer Mid Premium",
+    price: 110,
+    imgFront: sbZoomFront,
+    imgMain: sbZoomMain,
+    imgRight: sbZoomRight,
+  },
+  {
+    name: "Nike Winflo 8",
+    price: 90,
+    imgFront: winfloFront,
+    imgMain: winfloMain,
+    imgRight: winfloRight,
+  },
+  {
+    name: "PG 5",
+    price: 110,
+    imgFont: pg5Front,
+    imgMain: pg5Main,
+    imgRight: pg5Right,
+  },
+  {
+    name: "Zion 1",
+    price: 120,
+    imgFront: zion1Front,
+    imgMain: zion1Main,
+    imgRight: zion1Right,
+  },
+];
