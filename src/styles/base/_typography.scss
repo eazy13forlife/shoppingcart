@@ -1,0 +1,19 @@
+.heading-logo {
+  font-weight: 200;
+  color: var(--secondary-blue);
+  &--main {
+    font-size: 5rem;
+    display: block;
+  }
+  &--sub {
+    font-size: 2rem;
+    font-weight: 300;
+    display: block;
+  }
+}
+
+.text {
+  color: var(--secondary-blue);
+  font-size: 3rem;
+  text-transform: lowercase;
+}

@@ -1,7 +1,7 @@
+import uniqid from "uniqid";
+
 import types from "../actions/types.js";
 import inventoryArray from "../inventoryArray.js";
-
-import uniqid from "uniqid";
 
 const cartReducer = (state = [], action) => {
   if (action.payload === types.ADD_SHOE) {

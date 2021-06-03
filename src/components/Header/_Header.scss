@@ -1,0 +1,11 @@
+.Header {
+  padding: 2rem 8rem;
+  &__logoandicon {
+    display: flex;
+    align-items: center;
+  }
+
+  .shopping-bag {
+    margin-left: auto;
+  }
+}
