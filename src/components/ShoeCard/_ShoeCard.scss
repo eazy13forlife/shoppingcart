@@ -1,12 +1,16 @@
 .ShoeCard {
-  background-color: var(--primary-blue);
-  height: 30rem;
+  background-color: #f8f8f8;
+  height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
+  box-shadow: 0 0.2rem 0.2rem var(--secondary-blue);
+  cursor: pointer;
+
   &__image {
-    max-width: 100%;
+    max-width: 110%;
     display: block;
-    transform: translateY(-5rem);
+    transform: translateY(-1rem);
   }
 }

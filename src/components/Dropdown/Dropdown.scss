@@ -1,0 +1,41 @@
+.Dropdown {
+  display: inline-block;
+  margin-left: 2rem;
+  position: absolute;
+  top: 0px;
+  &__list-parent {
+    background-color: #d3d3d3;
+    padding: 0.5rem;
+    border-radius: 7px;
+    box-shadow: 0rem 1rem 2rem lightgrey;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 400ms;
+    &--open {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__list {
+    list-style-type: none;
+  }
+  &__item {
+    text-align: center;
+    padding: 0rem 2rem;
+    border-radius: 7px;
+    &:hover {
+      background-color: #1e90ff;
+    }
+  }
+  &__arrow-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  &__button {
+    padding: 0rem 1rem;
+    background-color: transparent;
+    border: none;
+  }
+}

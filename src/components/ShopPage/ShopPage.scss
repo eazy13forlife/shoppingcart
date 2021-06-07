@@ -1,13 +1,16 @@
 .ShopPage {
+  position: relative;
   &__grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    padding: 0rem 20rem;
+    grid-template-columns:
+      [full-start]1fr [center-start]repeat(8, minmax(min-content, 15rem))
+      [center-end] 1fr[full-end];
   }
   &__shoe-grid {
+    grid-column: center-start/center-end;
     display: grid;
-    grid-column: 1/-1;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, 35rem);
+    grid-gap: 5rem;
+    justify-content: center;
   }
 }

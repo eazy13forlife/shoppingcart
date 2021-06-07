@@ -17,3 +17,11 @@
   font-size: 3rem;
   text-transform: lowercase;
 }
+
+.large-heading {
+  display: block;
+  font-size: 8rem;
+  font-weight: 200;
+  color: var(--secondary-blue);
+  letter-spacing: 1rem;
+}

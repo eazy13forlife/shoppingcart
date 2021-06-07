@@ -1,0 +1,53 @@
+.SelectedShoeModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    background-color: #dafbff;
+    width: 75%;
+    padding: 8rem 2rem;
+    box-shadow: 0 1rem 9rem lightgrey;
+    border-radius: 1.5rem;
+  }
+  &__figure {
+    height: 40rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    width: 66rem;
+    transform: translateY(-6rem);
+  }
+  &__button {
+    background-color: transparent;
+    border: none;
+    &:active .SelectedShoeModal__icon {
+      transform: translateX(0.4rem);
+    }
+  }
+  &__icon {
+    width: 10rem;
+    height: 10rem;
+    color: var(--secondary-blue);
+  }
+  &__name {
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+  }
+  .text {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+}
