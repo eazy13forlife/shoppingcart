@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import Header from "../Header/Header.js";
 import ShoeCard from "../ShoeCard/ShoeCard.js";
 import SelectedShoeModal from "../SelectedShoeModal/SelectedShoeModal.js";
-import Dropdown from "../Dropdown/Dropdown.js";
 import "./ShopPage.scss";
 
 const ShopPage = () => {
@@ -36,7 +35,6 @@ const ShopPage = () => {
         <div className="ShopPage__shoe-grid">{renderedShoeList}</div>
       </div>
       {selectedShoe ? <SelectedShoeModal /> : null}
-      <Dropdown />
     </div>
   );
 };

@@ -4,50 +4,74 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &__container {
-    background-color: #dafbff;
-    width: 75%;
-    padding: 8rem 2rem;
-    box-shadow: 0 1rem 9rem lightgrey;
-    border-radius: 1.5rem;
+  padding: 5rem;
+  background-color: rgba(255, 255, 255, 0.97);
+  &__name {
+    background-color: transparent;
+    width: 70%;
+    position: absolute;
+    line-height: 1.3;
+    z-index: 2;
   }
+  &__price-text {
+  }
+  &__actions {
+    display: flex;
+    margin-top: 1rem;
+  }
+  &__size-text {
+    margin-left: 10rem;
+    font-size: 1.2rem;
+  }
+  &__size-number {
+    font-size: 2.3rem;
+    display: inline-block;
+  }
+  &__add-bag {
+    margin-left: 1rem;
+  }
+  .Dropdown {
+    margin-left: 0rem;
+    margin-top: 0.5rem;
+  }
+
   &__figure {
     height: 40rem;
-    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 70%;
+    transform: translatey(-55%);
   }
   &__image {
-    width: 66rem;
-    transform: translateY(-6rem);
+    width: 50%;
+    transform: scale(1.8);
   }
   &__button {
     background-color: transparent;
     border: none;
-    &:active .SelectedShoeModal__icon {
-      transform: translateX(0.4rem);
+    position: absolute;
+    top: 100%;
+    z-index: 20;
+    &:hover {
+      transform: translateY(-0.5rem);
+    }
+    &:active {
+      transform: translateX(0.3rem);
+    }
+    &--left {
+      left: 0%;
+    }
+    &--right {
+      right: 0%;
     }
   }
   &__icon {
-    width: 10rem;
-    height: 10rem;
     color: var(--secondary-blue);
-  }
-  &__name {
-    display: inline-block;
-    text-align: center;
-    line-height: 1;
-  }
-  .text {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 1rem;
+    width: 5rem;
+    height: 5rem;
   }
 }

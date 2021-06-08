@@ -1,8 +1,8 @@
 .Dropdown {
   display: inline-block;
-  margin-left: 2rem;
-  position: absolute;
   top: 0px;
+  position: relative;
+
   &__list-parent {
     background-color: #d3d3d3;
     padding: 0.5rem;
@@ -10,6 +10,7 @@
     box-shadow: 0rem 1rem 2rem lightgrey;
     position: absolute;
     top: 0;
+    z-index: 1000000000;
     visibility: hidden;
     opacity: 0;
     transition: opacity 400ms;
@@ -22,7 +23,6 @@
     list-style-type: none;
   }
   &__item {
-    text-align: center;
     padding: 0rem 2rem;
     border-radius: 7px;
     &:hover {

@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
 import "./Dropdown.scss";
-const Dropdown = () => {
+const Dropdown = ({ array, onItemClick }) => {
   const dropdownRef = useRef();
-  const listRef = useRef();
 
   const [openDropdown, setOpenDropdown] = useState(null);
   const [listHeight, setListHeight] = useState(0);
@@ -26,9 +25,19 @@ const Dropdown = () => {
     setListHeight(dropdownRef.current.children[1].children[0].clientHeight);
   }, []);
 
-  const array = [1, 2, 3, 4, 5, 6, 7];
-  const renderedList = array.map((item) => {
-    return <li className="Dropdown__item">{item}</li>;
+  const renderedList = array.map((item, index) => {
+    return (
+      <li
+        className="Dropdown__item"
+        key={index}
+        onClick={() => {
+          onItemClick(item);
+          setOpenDropdown(false);
+        }}
+      >
+        {item}
+      </li>
+    );
   });
 
   const animateDropdown = () => {
@@ -56,9 +65,7 @@ const Dropdown = () => {
         <RiArrowDownSLine className="Dropdown__arrow-icon" />
       </button>
       <div className={`Dropdown__list-parent`} style={animateDropdown()}>
-        <ul className="Dropdown__list" ref={listRef}>
-          {renderedList}
-        </ul>
+        <ul className="Dropdown__list">{renderedList}</ul>
       </div>
     </div>
   );
