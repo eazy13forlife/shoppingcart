@@ -1,4 +1,11 @@
 import { addShoe, removeShoe, updateQuantity, updateSize } from "./cart.js";
-import selectShoe from "./selectShoe.js";
+import { selectShoe, selectShoeSize } from "./selectShoe.js";
 
-export { addShoe, removeShoe, updateQuantity, updateSize, selectShoe };
+export {
+  addShoe,
+  removeShoe,
+  updateQuantity,
+  updateSize,
+  selectShoe,
+  selectShoeSize,
+};

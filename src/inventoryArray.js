@@ -164,7 +164,7 @@ const inventory = [
   {
     name: "PG 5",
     price: 110,
-    imgFont: pg5Front,
+    imgFront: pg5Front,
     imgMain: pg5Main,
     imgRight: pg5Right,
   },

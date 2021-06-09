@@ -13,26 +13,39 @@
     line-height: 1.3;
     z-index: 2;
   }
+  .large-heading {
+    display: inline-block;
+  }
   &__price-text {
+    margin-left: 0.5rem;
   }
   &__actions {
     display: flex;
     margin-top: 1rem;
   }
   &__size-text {
-    margin-left: 10rem;
+    position: relative;
     font-size: 1.2rem;
   }
   &__size-number {
     font-size: 2.3rem;
     display: inline-block;
   }
-  &__add-bag {
-    margin-left: 1rem;
-  }
   .Dropdown {
     margin-left: 0rem;
     margin-top: 0.5rem;
+  }
+
+  &__add-bag {
+    margin-left: 0.5rem;
+  }
+  &__error-text {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    color: red;
   }
 
   &__figure {

@@ -4,6 +4,7 @@ const types = {
   UPDATE_QUANTITY: "CHANGE_QUANTITY",
   UPDATE_SIZE: "UPDATE_SIZE",
   SELECT_SHOE: "SELECT_SHOE",
+  SELECT_SHOE_SIZE: "SELECT_SHOE_SIZE",
 };
 
 export default types;

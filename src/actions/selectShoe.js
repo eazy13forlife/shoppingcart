@@ -9,8 +9,16 @@ const selectShoe = (name, price, imgFront, imgMain, imgRight) => {
       imgFront,
       imgMain,
       imgRight,
+      size: null,
     },
   };
 };
 
-export default selectShoe;
+const selectShoeSize = (size) => {
+  return {
+    type: types.SELECT_SHOE_SIZE,
+    payload: size,
+  };
+};
+
+export { selectShoe, selectShoeSize };

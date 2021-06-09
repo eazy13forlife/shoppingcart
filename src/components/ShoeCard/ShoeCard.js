@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import selectShoe from "../../actions/selectShoe.js";
+import { selectShoe } from "../../actions/selectShoe.js";
 
 import "./_ShoeCard.scss";
 
