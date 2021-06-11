@@ -5,7 +5,7 @@ import image from "../../images/maxwell-nelson-NGWwHZeHNVE-unsplash-2.jpg";
 import "./App.scss";
 import HomePage from "../HomePage/HomePage.js";
 import ShopPage from "../ShopPage/ShopPage.js";
-import CartPage from "../CartPage.js/CartPage.js";
+import CartPage from "../CartPage.js/CartPage";
 
 const App = () => {
   return (

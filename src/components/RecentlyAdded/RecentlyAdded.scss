@@ -1,0 +1,53 @@
+.RecentlyAdded {
+  padding: 2rem;
+  width: 30vw;
+  position: fixed;
+  background-color: white;
+  border: 1px solid var(--secondary-blue);
+
+  z-index: 10000000;
+  &__confirmation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  &__icon {
+    color: green;
+    margin-right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  &__header {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--secondary-blue);
+  }
+  &__shoe-info {
+    display: flex;
+    align-self: flex-start;
+  }
+  &__image {
+    display: block;
+    width: 40%;
+    transform: translateY(-5rem);
+  }
+  &__shoe-details {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+  &__text {
+    font-size: 2rem;
+    &--blue {
+      color: var(--secondary-blue);
+    }
+    &--lightgrey {
+      color: grey;
+    }
+  }
+  &__button {
+    margin-left: auto;
+  }
+  .text-button {
+    display: inline-block;
+  }
+}

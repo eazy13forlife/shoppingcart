@@ -3,7 +3,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 import Dropdown from "../Dropdown/Dropdown.js";
-import { selectShoeSize } from "../../actions/";
+import {
+  selectShoeSize,
+  addShoe,
+  closeShoeModal,
+  addRecent,
+} from "../../actions/";
 import "./SelectedShoeModal.scss";
 
 const SelectedShoeModal = () => {
@@ -38,7 +43,19 @@ const SelectedShoeModal = () => {
     if (!selectedShoe.size) {
       setShowError(true);
     } else {
-      dispatch(addShoe);
+      if (showError) {
+        setShowError(false);
+      }
+      dispatch(addShoe(selectedShoe.name, selectedShoe.size));
+      dispatch(
+        addRecent(
+          selectedShoe.name,
+          selectedShoe.size,
+          selectedShoe.price,
+          selectedShoe.imgMain
+        )
+      );
+      dispatch(closeShoeModal());
     }
   };
 
@@ -51,7 +68,7 @@ const SelectedShoeModal = () => {
           <p className="text SelectedShoeModal__size-text">
             Size:
             <span className="SelectedShoeModal__size-number">
-              {selectedShoe.size ? selectedShoe.size : ""}
+              {selectedShoe.size ? ` ${selectedShoe.size}` : ""}
             </span>
             {showError ? (
               <span className="SelectedShoeModal__error-text">Select Size</span>
@@ -77,6 +94,7 @@ const SelectedShoeModal = () => {
               15,
             ]}
             onItemClick={onSizeClick}
+            setShowError={setShowError}
           />
           <p
             className="text-button SelectedShoeModal__add-bag"

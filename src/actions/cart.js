@@ -7,14 +7,15 @@ const addShoe = (name, size) => {
     const specificShoe = inventory.find((object, index) => {
       return object.name === name;
     });
-    return {
+    console.log(specificShoe);
+    dispatch({
       type: types.ADD_SHOE,
       payload: {
         name: name,
         size: size,
         price: specificShoe.price,
       },
-    };
+    });
   };
 };
 
@@ -35,14 +36,14 @@ const updateQuantity = (name, id, quantity) => {
     const specificShoe = inventory.find((object, index) => {
       return object.name === name;
     });
-    return {
+    dispatch({
       type: types.UPDATE_QUANTITY,
       payload: {
         id: id,
         quantity: quantity,
         price: specificShoe.price,
       },
-    };
+    });
   };
 };
 
@@ -53,14 +54,14 @@ const updateSize = (name, id, size) => {
     const specificShoe = inventory.find((object, index) => {
       return object.name === name;
     });
-    return {
+    dispatch({
       type: types.UPDATE_SIZE,
       payload: {
         id: id,
         size: size,
         price: specificShoe.price,
       },
-    };
+    });
   };
 };
 export { addShoe, removeShoe, updateQuantity, updateSize };

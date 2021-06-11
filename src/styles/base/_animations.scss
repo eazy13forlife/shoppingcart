@@ -1,4 +1,4 @@
-@keyframes openDropdown {
+@keyframes open {
   0% {
     visibility: hidden;
     opacity: 0;
@@ -9,7 +9,7 @@
   }
 }
 
-@keyframes closeDropdown {
+@keyframes close {
   0% {
     visibility: visible;
     opacity: 1;

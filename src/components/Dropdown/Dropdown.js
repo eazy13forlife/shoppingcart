@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
 import "./Dropdown.scss";
-const Dropdown = ({ array, onItemClick }) => {
+const Dropdown = ({ array, onItemClick, setShowError }) => {
   const dropdownRef = useRef();
 
   const [openDropdown, setOpenDropdown] = useState(null);
+
   const [listHeight, setListHeight] = useState(0);
 
   useEffect(() => {
@@ -17,7 +18,7 @@ const Dropdown = ({ array, onItemClick }) => {
     };
     document.body.addEventListener("click", closeDropdown);
     return () => {
-      document.removeEventListener("click", closeDropdown);
+      document.body.removeEventListener("click", closeDropdown);
     };
   }, []);
 
@@ -33,6 +34,7 @@ const Dropdown = ({ array, onItemClick }) => {
         onClick={() => {
           onItemClick(item);
           setOpenDropdown(false);
+          setShowError(false);
         }}
       >
         {item}
@@ -42,9 +44,9 @@ const Dropdown = ({ array, onItemClick }) => {
 
   const animateDropdown = () => {
     if (openDropdown) {
-      return { animation: "openDropdown 0ms both" };
+      return { animation: "open 0ms both" };
     } else if (openDropdown === false) {
-      return { animation: "closeDropdown 300ms both" };
+      return { animation: "close 300ms both" };
     } else {
       return null;
     }

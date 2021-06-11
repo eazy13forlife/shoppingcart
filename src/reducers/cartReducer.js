@@ -4,7 +4,7 @@ import types from "../actions/types.js";
 import inventoryArray from "../inventoryArray.js";
 
 const cartReducer = (state = [], action) => {
-  if (action.payload === types.ADD_SHOE) {
+  if (action.type === types.ADD_SHOE) {
     const newCart = [...state];
     const specificShoe = newCart.find((shoe, index) => {
       return (
@@ -20,14 +20,14 @@ const cartReducer = (state = [], action) => {
         name: action.payload.name,
         size: action.payload.size,
         quantity: 1,
-        totalPrice: action.payload.quantity * action.payload.price,
+        totalPrice: 1 * action.payload.price,
         id: uniqid(),
       });
       return newCart;
     }
   }
 
-  if (action.payload === types.UPDATE_SIZE) {
+  if (action.type === types.UPDATE_SIZE) {
     const newCart = [...state];
     const specificShoe = newCart.find((shoe, index) => {
       return shoe.id === action.payload.id;
@@ -36,7 +36,7 @@ const cartReducer = (state = [], action) => {
     return newCart;
   }
 
-  if (action.payload === types.UPDATE_QUANTITY) {
+  if (action.type === types.UPDATE_QUANTITY) {
     const newCart = [...state];
     const specificShoe = newCart.find((shoe, index) => {
       return shoe.id === action.payload.id;
