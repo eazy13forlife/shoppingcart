@@ -19,6 +19,7 @@ const cartReducer = (state = [], action) => {
       newCart.push({
         name: action.payload.name,
         size: action.payload.size,
+        img: action.payload.img,
         quantity: 1,
         totalPrice: 1 * action.payload.price,
         id: uniqid(),

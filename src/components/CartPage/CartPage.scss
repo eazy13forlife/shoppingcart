@@ -1,4 +1,21 @@
 .CartPage {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, [col-start] 1fr[col-end]);
+  .Header {
+    grid-column: col-start 1/-1;
+    grid-row: 1/4;
+  }
+  &__cart {
+    grid-column: col-start 1 / col-end 8;
+  }
+  &__cart-details {
+    grid-column: col-start 10/-1;
+    grid-row: 1/4;
+    background-color: red;
+    z-index: 1;
+  }
+  .CartItem {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

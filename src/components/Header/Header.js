@@ -1,9 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import history from "../../history.js";
+
 import ShoppingBagIcon from "../ShoppingBagIcon/ShoppingBagIcon.js";
 
 import "./_Header.scss";
 
 const Header = ({ pageName }) => {
+  const onShoppingBagClick = () => {
+    history.push("/cart");
+  };
+
   return (
     <div className="Header">
       <div className="Header__logoandicon">
@@ -13,7 +20,8 @@ const Header = ({ pageName }) => {
             limited edition Nikes for the Nike shoe fanataic
           </span>
         </h1>
-        <ShoppingBagIcon />
+
+        <ShoppingBagIcon onClick={onShoppingBagClick} />
       </div>
       <p className="text">{pageName}</p>
     </div>

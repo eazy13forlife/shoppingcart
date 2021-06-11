@@ -14,6 +14,7 @@ const addShoe = (name, size) => {
         name: name,
         size: size,
         price: specificShoe.price,
+        img: specificShoe.imgMain,
       },
     });
   };

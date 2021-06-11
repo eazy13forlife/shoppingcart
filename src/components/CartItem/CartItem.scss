@@ -1,0 +1,27 @@
+.CartItem {
+  &__image {
+    max-width: 100%;
+    max-height: 10rem;
+    transform: scale(1.5);
+    grid-column: 1/2;
+    grid-row: 1/4;
+    justify-self: center;
+  }
+  &__header {
+    grid-column: 2/5;
+  }
+  &__action-group {
+    display: flex;
+    &--quantity {
+      grid-column: 2/3;
+    }
+    &--size {
+      grid-column: 3/4;
+    }
+  }
+  &__text {
+    &--price {
+      grid-column: 2/4;
+    }
+  }
+}

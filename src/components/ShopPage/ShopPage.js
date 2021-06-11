@@ -9,7 +9,6 @@ import RecentlyAdded from "../RecentlyAdded/RecentlyAdded.js";
 import "./ShopPage.scss";
 
 const ShopPage = (props) => {
-  console.log(props.mounted);
   const dispatch = useDispatch();
 
   const recentlyAdded = useSelector((state) => {
