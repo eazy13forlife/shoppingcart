@@ -42,7 +42,7 @@ const RecentlyAdded = () => {
         <IoCheckmarkCircle className="RecentlyAdded__icon" />
         <p className="RecentlyAdded__header">Added to Bag</p>
 
-        <button className=" RecentlyAdded__button primary-button">
+        <button className=" RecentlyAdded__button primary-button primary-button--blue">
           View Bag
         </button>
       </div>

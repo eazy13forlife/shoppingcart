@@ -15,8 +15,11 @@
     grid-row-gap: 2rem;
   }
   &__cart-details {
-    grid-column: col-start 10/-1;
+    grid-column: col-start 9/-1;
+    grid-row: 2/4;
     background-color: var(--primary-blue);
     z-index: 1;
+    display: grid;
+    justify-items: center;
   }
 }

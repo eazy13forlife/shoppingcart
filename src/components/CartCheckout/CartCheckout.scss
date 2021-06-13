@@ -1,0 +1,17 @@
+.CartCheckout {
+  background-color: var(--secondary-blue);
+  padding: 2rem;
+  height: 20rem;
+  margin-top: 10rem;
+  display: grid;
+  width: 70%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 2rem;
+
+  &__checkout-button {
+    grid-column: 1/3;
+  }
+  &__paypal-button {
+    grid-column: 1/3;
+  }
+}

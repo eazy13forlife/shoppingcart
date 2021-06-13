@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+
 import Header from "../Header/Header.js";
+import CartItem from "../CartItem/CartItem.js";
+import CartCheckout from "../CartCheckout/CartCheckout.js";
 
 import "./CartPage.scss";
-import CartItem from "../CartItem/CartItem.js";
 
 const CartPage = () => {
   const allItems = useSelector((state) => {
@@ -27,7 +29,9 @@ const CartPage = () => {
     <div className="CartPage">
       <Header pageName="your cart" />
       <div className="CartPage__cart">{renderedCartItems}</div>
-      <div className="CartPage__cart-details">cart details </div>
+      <div className="CartPage__cart-details">
+        <CartCheckout />
+      </div>
     </div>
   );
 };
