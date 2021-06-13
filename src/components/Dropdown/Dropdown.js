@@ -34,7 +34,9 @@ const Dropdown = ({ array, onItemClick, setShowError }) => {
         onClick={() => {
           onItemClick(item);
           setOpenDropdown(false);
-          setShowError(false);
+          if (setShowError) {
+            setShowError(false);
+          }
         }}
       >
         {item}

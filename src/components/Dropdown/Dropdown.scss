@@ -2,6 +2,7 @@
   display: inline-block;
   top: 0px;
   position: relative;
+  height: 3rem;
 
   &__list-parent {
     background-color: #d3d3d3;
@@ -34,7 +35,7 @@
     height: 3rem;
   }
   &__button {
-    padding: 0rem 1rem;
+    padding: 0rem 0rem;
     background-color: transparent;
     border: none;
   }

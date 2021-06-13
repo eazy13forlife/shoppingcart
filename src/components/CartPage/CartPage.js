@@ -18,6 +18,8 @@ const CartPage = () => {
         size={shoe.size}
         totalPrice={shoe.totalPrice}
         img={shoe.img}
+        id={shoe.id}
+        key={index}
       />
     );
   });
@@ -25,7 +27,7 @@ const CartPage = () => {
     <div className="CartPage">
       <Header pageName="your cart" />
       <div className="CartPage__cart">{renderedCartItems}</div>
-      <div className="CartPage__cart-details">cart details</div>
+      <div className="CartPage__cart-details">cart details </div>
     </div>
   );
 };

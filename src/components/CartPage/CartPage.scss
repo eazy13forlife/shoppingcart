@@ -1,21 +1,22 @@
 .CartPage {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr[col-end]);
+  grid-auto-rows: 17rem 10rem auto;
+  min-height: 100vh;
   .Header {
     grid-column: col-start 1/-1;
-    grid-row: 1/4;
+    grid-row-start: 1;
   }
   &__cart {
+    display: grid;
+
     grid-column: col-start 1 / col-end 8;
+    grid-row-start: 3;
+    grid-row-gap: 2rem;
   }
   &__cart-details {
     grid-column: col-start 10/-1;
-    grid-row: 1/4;
-    background-color: red;
+    background-color: var(--primary-blue);
     z-index: 1;
-  }
-  .CartItem {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
   }
 }
