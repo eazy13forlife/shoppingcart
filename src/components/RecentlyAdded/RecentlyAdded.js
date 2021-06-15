@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { IoCheckmarkCircle } from "react-icons/io5";
 
+import history from "../../history.js";
 import { removeRecent } from "../../actions/";
 import "./RecentlyAdded.scss";
 
@@ -36,13 +37,24 @@ const RecentlyAdded = () => {
     };
   }, []);
 
+  const onCloseClick = () => {
+    dispatch(removeRecent());
+  };
+
+  const onViewBagClick = () => {
+    history.push("/cart");
+  };
+
   return (
     <div className="RecentlyAdded" ref={recentlyAddedRef}>
       <div className="RecentlyAdded__confirmation">
         <IoCheckmarkCircle className="RecentlyAdded__icon" />
         <p className="RecentlyAdded__header">Added to Bag</p>
 
-        <button className=" RecentlyAdded__button primary-button primary-button--blue">
+        <button
+          className=" RecentlyAdded__button primary-button primary-button--blue"
+          onClick={onViewBagClick}
+        >
           View Bag
         </button>
       </div>
@@ -61,7 +73,9 @@ const RecentlyAdded = () => {
         </div>
       </div>
       <div className="u-align-center">
-        <p className="RecentlyAdded__close text-button">close</p>
+        <p className="RecentlyAdded__close text-button" onClick={onCloseClick}>
+          close
+        </p>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
 import "./Dropdown.scss";
-const Dropdown = ({ array, onItemClick, setShowError }) => {
+const Dropdown = ({ color, array, onItemClick, setShowError }) => {
   const dropdownRef = useRef();
 
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -66,7 +66,12 @@ const Dropdown = ({ array, onItemClick, setShowError }) => {
           }
         }}
       >
-        <RiArrowDownSLine className="Dropdown__arrow-icon" />
+        <RiArrowDownSLine
+          className="Dropdown__arrow-icon"
+          style={{
+            color: color,
+          }}
+        />
       </button>
       <div className={`Dropdown__list-parent`} style={animateDropdown()}>
         <ul className="Dropdown__list">{renderedList}</ul>

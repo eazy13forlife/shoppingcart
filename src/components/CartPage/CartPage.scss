@@ -9,7 +9,7 @@
   }
   &__cart {
     display: grid;
-
+    grid-auto-rows: 15rem;
     grid-column: col-start 1 / col-end 8;
     grid-row-start: 3;
     grid-row-gap: 2rem;

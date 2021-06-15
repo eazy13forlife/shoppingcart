@@ -11,11 +11,17 @@ const Header = ({ pageName }) => {
     history.push("/cart");
   };
 
+  const onHeadingClick = () => {
+    history.push("/shop");
+  };
+
   return (
     <div className="Header">
       <div className="Header__logoandicon">
         <h1 className="heading-logo HomePage__heading-logo">
-          <span className="heading-logo--main">The Shoe Store</span>
+          <span className="heading-logo--main" onClick={onHeadingClick}>
+            The Shoe Store
+          </span>
           <span className="heading-logo--sub">
             limited edition Nikes for the Nike shoe fanataic
           </span>

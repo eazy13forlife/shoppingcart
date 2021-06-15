@@ -4,8 +4,8 @@
   position: fixed;
   background-color: white;
   border: 1px solid var(--secondary-blue);
-
   z-index: 10000000;
+  animation: slideDown 500ms both;
   &__confirmation {
     display: flex;
     align-items: center;

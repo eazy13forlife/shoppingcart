@@ -17,6 +17,7 @@ const CartItem = ({ name, id, quantity, size, totalPrice, img }) => {
         <p className="CartItem__text">Quantity:</p>
         <p className="CartItem__text">{quantity}</p>
         <Dropdown
+          color="var(--secondary-blue)"
           array={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
           onItemClick={(item) => {
             dispatch(updateQuantity(name, id, item));
@@ -28,6 +29,7 @@ const CartItem = ({ name, id, quantity, size, totalPrice, img }) => {
         <p className="CartItem__text">Size:</p>
         <p className="CartItem__text">{size}</p>
         <Dropdown
+          color="var(--secondary-blue)"
           array={[
             6,
             6.5,

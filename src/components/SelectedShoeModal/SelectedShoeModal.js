@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { VscChromeClose } from "react-icons/vsc";
 
 import Dropdown from "../Dropdown/Dropdown.js";
 import {
@@ -59,15 +60,25 @@ const SelectedShoeModal = () => {
     }
   };
 
+  const onCloseClick = () => {
+    dispatch(closeShoeModal());
+  };
+
   return (
     <div className="SelectedShoeModal">
+      <button
+        className="SelectedShoeModal__close-button"
+        onClick={onCloseClick}
+      >
+        <VscChromeClose className="SelectedShoeModal__close-icon" />
+      </button>
       <div className="SelectedShoeModal__name">
         <h1 className="large-heading">{selectedShoe.name}</h1>
-        <span className="text SelectedShoeModal__price-text">{`$${selectedShoe.price}`}</span>
+        <span className="text SelectedShoeModal__price-text ">{`$${selectedShoe.price}`}</span>
         <div className="SelectedShoeModal__actions">
           <p className="text SelectedShoeModal__size-text">
             Size:
-            <span className="SelectedShoeModal__size-number">
+            <span className="SelectedShoeModal__size-number bold">
               {selectedShoe.size ? ` ${selectedShoe.size}` : ""}
             </span>
             {showError ? (
@@ -75,6 +86,7 @@ const SelectedShoeModal = () => {
             ) : null}
           </p>
           <Dropdown
+            color="var(--secondary-blue)"
             array={[
               6,
               6.5,

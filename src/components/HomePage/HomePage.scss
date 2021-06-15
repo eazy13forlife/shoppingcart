@@ -1,16 +1,23 @@
+@import "../../styles/abstracts/_mixins.scss";
+
 .HomePage {
   background-image: url("../../images/kristian-egelund-wmdcUQ0CJ4c-unsplash-2.jpg");
   background-size: cover;
   height: 100vh;
   padding: 3rem 8rem;
   display: grid;
-  grid-template-columns: max-content;
+  grid-template-columns: minmax(min-content, max-content);
   grid-template-rows: min-content min-content min-content;
   grid-row-gap: 1rem;
   align-items: center;
   justify-items: start;
+  line-height: 1.4;
+  @include respondMax(530px) {
+    grid-template-rows: 25rem min-content min-content;
+  }
   &__heading-logo {
     height: 20vh;
+    align-self: start;
   }
   &__shop {
   }

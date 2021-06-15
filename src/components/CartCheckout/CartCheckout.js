@@ -21,7 +21,7 @@ const CartCheckout = () => {
   return (
     <div className="CartCheckout">
       <p className="CartCheckout__text">Total</p>
-      <p className="CartCheckout__text">{`$${subTotal}`}</p>
+      <p className="CartCheckout__text CartCheckout__price">{`$${subTotal}`}</p>
       <button className="primary-button primary-button--white CartCheckout__checkout-button">
         Checkout
       </button>
