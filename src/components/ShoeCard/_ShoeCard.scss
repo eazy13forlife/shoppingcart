@@ -1,16 +1,39 @@
+@import "../../styles/abstracts/_mixins.scss";
+
 .ShoeCard {
+  overflow: hidden;
   background-color: #f8f8f8;
   height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 2.5rem;
   box-shadow: 0 0.2rem 0.2rem var(--secondary-blue);
   cursor: pointer;
+  @include respondMax(900px) {
+    height: 15rem;
+  }
+  @include respondMax(800px) {
+    padding: 3rem;
+    height: 22rem;
+  }
+  @include respondMax(450px) {
+    padding: 3rem;
+    height: 18rem;
+  }
 
   &__image {
     max-width: 110%;
     display: block;
     transform: translateY(-1rem);
+    @include respondMax(1000px) {
+      transform: scale(1.2);
+    }
+    @include respondMax(800px) {
+      transform: scale(1.2);
+    }
+    @include respondMax(550px) {
+      transform: scale(1.4);
+    }
   }
 }

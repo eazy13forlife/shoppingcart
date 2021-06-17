@@ -1,3 +1,5 @@
+@import "../../styles/abstracts/_mixins.scss";
+
 .SelectedShoeModal {
   position: fixed;
   top: 0;
@@ -73,13 +75,26 @@
     justify-content: center;
     position: absolute;
     top: 50%;
-    right: 10%;
+    left: 50%;
     width: 70%;
-    transform: translatey(-55%);
+    transform: translate(-50%, -50%);
+
+    @include respondMax(1000px) {
+      top: 53%;
+    }
+    @include respondMax(700px) {
+      top: 60%;
+    }
   }
   &__image {
     width: 50%;
     transform: scale(1.8);
+    @include respondMax(1000px) {
+      transform: scale(2.5);
+    }
+    @include respondMax(400px) {
+      transform: scale(2.6);
+    }
   }
   &__button {
     background-color: transparent;
@@ -87,6 +102,18 @@
     position: absolute;
     top: 100%;
     z-index: 20;
+    @include respondMax(1000px) {
+      top: 110%;
+    }
+    @include respondMax(800px) {
+      top: 100%;
+    }
+    @include respondMax(650px) {
+      top: 90%;
+    }
+    @include respondMax(450px) {
+      top: 80%;
+    }
     &:hover {
       transform: translateY(-0.5rem);
     }

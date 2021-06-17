@@ -1,6 +1,13 @@
+@import "../../styles/abstracts/_mixins.scss";
+
 .ShopPage {
   position: relative;
+  padding: 0rem 2rem;
+  @include respondMax(450px) {
+    padding: 0rem 1rem;
+  }
   &__grid {
+    margin-top: 2rem;
     display: grid;
     grid-template-columns:
       [full-start]1fr [center-start]repeat(8, minmax(min-content, 15rem))
@@ -12,6 +19,40 @@
     grid-template-columns: repeat(auto-fit, 35rem);
     grid-gap: 5rem;
     justify-content: center;
+
+    @include respondMax(1200px) {
+      grid-column-gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, 30rem);
+    }
+    @include respondMax(1000px) {
+      grid-template-columns: repeat(auto-fit, 25rem);
+    }
+    @include respondMax(900px) {
+      grid-template-columns: repeat(auto-fit, 22rem);
+    }
+    @include respondMax(800px) {
+      grid-template-columns: repeat(auto-fit, 30rem);
+    }
+    @include respondMax(700px) {
+      justify-content: center;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(2, 25rem);
+    }
+    @include respondMax(550px) {
+      justify-content: center;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(2, 20rem);
+    }
+    @include respondMax(450px) {
+      justify-content: start;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(2, minmax(19rem, 1fr));
+    }
+    @include respondMax(400px) {
+      justify-content: start;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(2, minmax(17rem, 1fr));
+    }
   }
   .RecentlyAdded {
     top: 1rem;

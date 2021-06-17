@@ -8,7 +8,7 @@ const HomePage = () => {
       <h1 className="heading-logo HomePage__heading-logo">
         <span className="heading-logo--main">The Shoe Store</span>
         <span className="heading-logo--sub">
-          limited edition Nikes for the Nike shoe fanataic
+          Limited edition Nikes for the Nike shoe fanatic.
         </span>
       </h1>
       <Link to="/shop" className="text-button__link HomePage__shop">

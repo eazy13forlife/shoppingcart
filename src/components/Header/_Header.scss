@@ -1,6 +1,10 @@
+@import "../../styles/abstracts/_mixins.scss";
 .Header {
   cursor: pointer;
   padding: 2rem 8rem;
+  @include respondMax(900px) {
+    padding: 1rem;
+  }
   &__logoandicon {
     display: flex;
     align-items: center;
@@ -8,5 +12,11 @@
 
   .shopping-bag {
     margin-left: auto;
+  }
+  .text {
+    padding-left: 1.5rem;
+  }
+  &__text-bag {
+    display: flex;
   }
 }
