@@ -1,3 +1,5 @@
+@import "../../styles/abstracts/_mixins.scss";
+
 .CartItem {
   height: 15rem;
   display: grid;
@@ -5,8 +7,19 @@
   padding-bottom: 1rem;
   margin-left: 7rem;
   border-bottom: 1px solid var(--secondary-blue);
-  grid-column-gap: 3em;
+  grid-column-gap: 3rem;
   grid-auto-rows: auto;
+  @include respondMax(1000px) {
+    grid-template-columns: 10rem repeat(auto-fit, minmax(min-content, 15rem));
+  }
+
+  @include respondMax(600px) {
+    margin-left: 4rem;
+    grid-template-columns: 6rem repeat(auto-fit, minmax(min-content, 15rem));
+  }
+  @include respondMax(500px) {
+    grid-column-gap: 1.5rem;
+  }
   &__image {
     max-width: 100%;
     max-height: 12rem;
@@ -14,12 +27,16 @@
     grid-column: 1/2;
     grid-row: 1/4;
     justify-self: center;
+    padding-right: 1rem;
   }
   &__header {
-    grid-column: 2/-1;
+    grid-column: 2/4;
     font-size: 2rem;
     font-weight: 400;
     color: var(--secondary-blue);
+  }
+  .Dropdown {
+    margin-left: -1rem;
   }
   &__action-group {
     display: grid;
@@ -35,6 +52,9 @@
   &__text {
     font-size: 2rem;
     color: var(--secondary-blue);
+    @include respondMax(900px) {
+      font-size: 1.6rem;
+    }
     &--price {
       grid-column: 2/4;
       font-weight: 500;

@@ -23,6 +23,9 @@
   color: var(--secondary-blue);
   font-size: 3rem;
   text-transform: capitalize;
+  @include respondMax(500px) {
+    font-size: 2.5rem;
+  }
 }
 
 .large-heading {
@@ -35,6 +38,6 @@
     font-size: 5.5rem;
   }
   @include respondMax(500px) {
-    font-size: 5rem;
+    font-size: 3rem;
   }
 }

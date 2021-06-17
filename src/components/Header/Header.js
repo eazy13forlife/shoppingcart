@@ -43,7 +43,7 @@ const Header = ({ pageName }) => {
 
             <ShoppingBagIcon onClick={onShoppingBagClick} />
           </div>
-          <p className="text">{pageName}</p>
+          <p className="text Header__page-name">{pageName}</p>
         </div>
       );
     } else {
@@ -60,7 +60,7 @@ const Header = ({ pageName }) => {
             </h1>
           </div>
           <div className="Header__text-bag">
-            <p className="text">{pageName}</p>
+            <p className="text Header__page-name">{pageName}</p>
             <ShoppingBagIcon onClick={onShoppingBagClick} />
           </div>
         </div>
