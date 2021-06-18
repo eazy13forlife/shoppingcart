@@ -3,11 +3,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { updateQuantity, updateSize } from "../../actions/";
 import { createSelector } from "reselect";
 
+import { removeShoe } from "../../actions/";
 import Dropdown from "../Dropdown/Dropdown.js";
 import "./CartItem.scss";
 
 const CartItem = ({ name, id, quantity, size, totalPrice, img }) => {
   const dispatch = useDispatch();
+
+  const onRemoveClick = () => {
+    dispatch(removeShoe(id));
+  };
 
   return (
     <div className="CartItem">
@@ -56,6 +61,12 @@ const CartItem = ({ name, id, quantity, size, totalPrice, img }) => {
       </div>
 
       <p className="CartItem__text CartItem__text--price">{`$${totalPrice}`}</p>
+      <p
+        className="CartItem__remove-button text-button"
+        onClick={onRemoveClick}
+      >
+        Remove Shoe
+      </p>
     </div>
   );
 };

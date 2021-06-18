@@ -5,7 +5,7 @@
   grid-auto-rows: 17rem 10rem auto;
   min-height: 100vh;
   @include respondMax(850px) {
-    grid-auto-rows: 17rem 10rem auto auto;
+    grid-auto-rows: 17rem 10rem auto 1fr;
   }
   .Header {
     grid-column: col-start 1/-1;
@@ -18,7 +18,23 @@
     grid-row-start: 3;
     grid-row-gap: 2rem;
     @include respondMax(850px) {
-      grid-column: col-start 1 / col-end 11;
+      grid-column: col-start 1 / col-end 12;
+    }
+  }
+  &__empty-cart {
+    display: grid;
+    grid-column: col-start 1 / col-end 8;
+    grid-auto-rows: min-content;
+    grid-row-start: 3;
+    grid-template-columns: minmax(min-content, max-content);
+  }
+  &__empty-text {
+    font-size: 2rem;
+    color: var(--secondary-blue);
+    font-weight: 300;
+    padding-left: 10rem;
+    @include respondMax(900px) {
+      padding-left: 2rem;
     }
   }
   &__cart-details {
@@ -29,8 +45,9 @@
     display: grid;
     justify-items: center;
     @include respondMax(850px) {
+      padding: 4rem 0rem;
       grid-column: col-start 1 /-1;
-      grid-row: 4 / auto;
+      grid-row-start: 4;
     }
   }
 }

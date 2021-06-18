@@ -58,12 +58,16 @@ const RecentlyAdded = () => {
           View Bag
         </button>
       </div>
+
       <div className="RecentlyAdded__shoe-info">
-        <img
-          src={recentlyAdded.img}
-          alt={recentlyAdded.name}
-          className="RecentlyAdded__image"
-        />
+        <div className="RecentlyAdded__figure">
+          <img
+            src={recentlyAdded.img}
+            alt={recentlyAdded.name}
+            className="RecentlyAdded__image"
+          />
+        </div>
+
         <div className="RecentlyAdded__shoe-details">
           <p className="RecentlyAdded__text RecentlyAdded__text--blue">
             {recentlyAdded.name}
@@ -72,6 +76,7 @@ const RecentlyAdded = () => {
           <p className="RecentlyAdded__text RecentlyAdded__text--blue">{`$${recentlyAdded.price}`}</p>
         </div>
       </div>
+
       <div className="u-align-center">
         <p className="RecentlyAdded__close text-button" onClick={onCloseClick}>
           close

@@ -1,3 +1,5 @@
+@import "../../styles/abstracts/_mixins.scss";
+
 .RecentlyAdded {
   padding: 2rem;
   width: 30vw;
@@ -6,6 +8,7 @@
   border: 1px solid var(--secondary-blue);
   z-index: 10000000;
   animation: slideDown 500ms both;
+  box-shadow: 0rem 2rem 2rem lightgrey;
   &__confirmation {
     display: flex;
     align-items: center;
@@ -21,22 +24,51 @@
     font-size: 2rem;
     font-weight: 400;
     color: var(--secondary-blue);
+    margin-right: 1rem;
   }
   &__shoe-info {
     display: flex;
     align-self: flex-start;
+    @include respondMax(700px) {
+      justify-content: space-evenly;
+    }
+  }
+  &__figure {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+
+    @include respondMax(500px) {
+      flex: 0 0 40%;
+    }
   }
   &__image {
     display: block;
-    width: 40%;
+    max-width: 100%;
     transform: translateY(-5rem);
+    @include respondMax(700px) {
+      max-width: 40%;
+      transform: scale(2) translateY(-1.6rem);
+    }
+    @include respondMax(500px) {
+      max-width: 60%;
+      transform: scale(2) translateY(-1.3rem);
+    }
   }
   &__shoe-details {
     margin-left: 2rem;
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   &__text {
     font-size: 2rem;
+
+    @include respondMax(1000px) {
+      font-size: 1.8rem;
+    }
+
     &--blue {
       color: var(--secondary-blue);
     }
@@ -44,9 +76,22 @@
       color: grey;
     }
   }
+
+  .text-button {
+    @include respondMax(1000px) {
+      font-size: 2.5rem;
+    }
+  }
+
   &__button {
     margin-left: auto;
     cursor: pointer;
+  }
+  .primary-button {
+    font-size: 2.3rem;
+    @include respondMax(1000px) {
+      font-size: 1.8rem;
+    }
   }
   .text-button {
     display: inline-block;

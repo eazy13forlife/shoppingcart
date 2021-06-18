@@ -4,7 +4,7 @@
   height: 15rem;
   display: grid;
   grid-template-columns: 20rem repeat(auto-fit, minmax(min-content, 15rem));
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   margin-left: 7rem;
   border-bottom: 1px solid var(--secondary-blue);
   grid-column-gap: 3rem;
@@ -15,10 +15,15 @@
 
   @include respondMax(600px) {
     margin-left: 4rem;
-    grid-template-columns: 6rem repeat(auto-fit, minmax(min-content, 15rem));
+    grid-template-columns: 6rem repeat(auto-fit, minmax(min-content, 5rem));
   }
   @include respondMax(500px) {
     grid-column-gap: 1.5rem;
+    margin-left: 4rem;
+  }
+  @include respondMax(400px) {
+    grid-column-gap: 0.5rem;
+    margin-left: 3rem;
   }
   &__image {
     max-width: 100%;
@@ -27,7 +32,7 @@
     grid-column: 1/2;
     grid-row: 1/4;
     justify-self: center;
-    padding-right: 1rem;
+    padding-right: 1.5rem;
   }
   &__header {
     grid-column: 2/4;
@@ -56,8 +61,20 @@
       font-size: 1.6rem;
     }
     &--price {
-      grid-column: 2/4;
+      grid-column: 2/3;
       font-weight: 500;
+    }
+  }
+  &__remove-button {
+    grid-column: 3/4;
+    justify-self: start;
+    align-self: start;
+  }
+  .text-button {
+    font-size: 2rem;
+    color: darkgrey;
+    @include respondMax(900px) {
+      font-size: 1.8rem;
     }
   }
 }

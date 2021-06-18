@@ -1,3 +1,5 @@
+@import "../../styles/abstracts/_mixins.scss";
+
 .CartCheckout {
   background-color: var(--secondary-blue);
   padding: 2rem;
@@ -7,6 +9,9 @@
   width: 70%;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 2rem;
+  @include respondMax(850px) {
+    margin-top: 0rem;
+  }
   &__text {
     font-size: 2.4rem;
     color: white;

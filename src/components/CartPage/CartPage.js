@@ -28,7 +28,14 @@ const CartPage = () => {
   return (
     <div className="CartPage">
       <Header pageName="your cart" />
-      <div className="CartPage__cart">{renderedCartItems}</div>
+      {allItems.length ? (
+        <div className="CartPage__cart">{renderedCartItems}</div>
+      ) : (
+        <div className="CartPage__empty-cart">
+          <p className="CartPage__empty-text">Your cart is empty.</p>
+        </div>
+      )}
+
       <div className="CartPage__cart-details">
         <CartCheckout />
       </div>

@@ -51,12 +51,21 @@
     @include respondMax(400px) {
       justify-content: start;
       grid-gap: 1rem;
-      grid-template-columns: repeat(2, minmax(17rem, 1fr));
+      grid-template-columns: repeat(2, minmax(10rem, 1fr));
     }
   }
   .RecentlyAdded {
     top: 1rem;
     right: 5rem;
+    @include respondMax(1000px) {
+      right: 2rem;
+      width: 40vw;
+    }
+    @include respondMax(700px) {
+      width: 100vw;
+      right: 0rem;
+      height: auto;
+    }
   }
 }
 

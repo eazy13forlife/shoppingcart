@@ -47,7 +47,8 @@ const cartReducer = (state = [], action) => {
     return newCart;
   }
 
-  if (action.payload === types.REMOVE_SHOE) {
+  if (action.type === types.REMOVE_SHOE) {
+    console.log("hey");
     const newCart = [...state];
     return newCart.filter((shoe, index) => {
       return shoe.id !== action.payload.id ? true : false;
