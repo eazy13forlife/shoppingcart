@@ -6,6 +6,7 @@
   position: fixed;
   background-color: white;
   border: 1px solid var(--secondary-blue);
+  border-top: none;
   z-index: 10000000;
   animation: slideDown 500ms both;
   box-shadow: 0rem 2rem 2rem lightgrey;
@@ -61,28 +62,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  &__text {
-    font-size: 2rem;
-
-    @include respondMax(1000px) {
-      font-size: 1.8rem;
-    }
-
-    &--blue {
-      color: var(--secondary-blue);
-    }
-    &--lightgrey {
-      color: grey;
+    @include respondMax(700px) {
+      margin-left: 0rem;
     }
   }
-
-  .text-button {
-    @include respondMax(1000px) {
-      font-size: 2.5rem;
-    }
-  }
-
   &__button {
     margin-left: auto;
     cursor: pointer;
@@ -94,6 +77,9 @@
     }
   }
   .text-button {
-    display: inline-block;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translatex(-50%);
   }
 }

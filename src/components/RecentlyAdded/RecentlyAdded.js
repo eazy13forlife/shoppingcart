@@ -49,7 +49,7 @@ const RecentlyAdded = () => {
     <div className="RecentlyAdded" ref={recentlyAddedRef}>
       <div className="RecentlyAdded__confirmation">
         <IoCheckmarkCircle className="RecentlyAdded__icon" />
-        <p className="RecentlyAdded__header">Added to Bag</p>
+        <p className="heading-4 heading-4--blue">Added to Bag</p>
 
         <button
           className=" RecentlyAdded__button primary-button primary-button--blue"
@@ -69,19 +69,18 @@ const RecentlyAdded = () => {
         </div>
 
         <div className="RecentlyAdded__shoe-details">
-          <p className="RecentlyAdded__text RecentlyAdded__text--blue">
-            {recentlyAdded.name}
-          </p>
-          <p className="RecentlyAdded__text RecentlyAdded__text--lightgrey">{`Size ${recentlyAdded.size}`}</p>
-          <p className="RecentlyAdded__text RecentlyAdded__text--blue">{`$${recentlyAdded.price}`}</p>
+          <p className="text--small text--blue">{recentlyAdded.name}</p>
+          <p className="text--small text--grey">{`Size ${recentlyAdded.size}`}</p>
+          <p className="text--small text--blue">{`$${recentlyAdded.price}`}</p>
         </div>
       </div>
 
-      <div className="u-align-center">
-        <p className="RecentlyAdded__close text-button" onClick={onCloseClick}>
-          close
-        </p>
-      </div>
+      <p
+        className="RecentlyAdded__close text-button text-button--medium text-button--blue"
+        onClick={onCloseClick}
+      >
+        close
+      </p>
     </div>
   );
 };

@@ -20,12 +20,41 @@
 }
 
 .text {
-  color: var(--secondary-blue);
+  &--small {
+    font-size: 2rem;
+    @include respondMax(900px) {
+      font-size: 1.8rem;
+    }
+  }
+  &--large {
+    font-size: 3rem;
+    @include respondMax(500px) {
+      font-size: 2.5rem;
+    }
+  }
+  &--blue {
+    color: var(--secondary-blue);
+  }
+  &--grey {
+    color: #c0c0c0;
+  }
+  &--red {
+    color: red;
+  }
+}
+.heading-4 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  &--blue {
+    color: var(--secondary-blue);
+  }
+}
+.tertiary-heading {
   font-size: 3rem;
   text-transform: capitalize;
-  @include respondMax(500px) {
-    font-size: 2.5rem;
-  }
+  color: var(--secondary-blue);
+  font-weight: 200;
 }
 
 .large-heading {
@@ -36,6 +65,12 @@
   letter-spacing: 0.7rem;
   @include respondMax(800px) {
     font-size: 5.5rem;
+  }
+  @include respondMax(800px) {
+    font-size: 4.3rem;
+  }
+  @include respondMax(550px) {
+    font-size: 3.5rem;
   }
   @include respondMax(500px) {
     font-size: 3rem;

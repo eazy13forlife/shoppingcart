@@ -74,15 +74,17 @@ const SelectedShoeModal = () => {
       </button>
       <div className="SelectedShoeModal__name">
         <h1 className="large-heading">{selectedShoe.name}</h1>
-        <span className="text SelectedShoeModal__price-text ">{`$${selectedShoe.price}`}</span>
+        <span className="text--large text--blue SelectedShoeModal__price-text ">{`$${selectedShoe.price}`}</span>
         <div className="SelectedShoeModal__actions">
-          <p className="text SelectedShoeModal__size-text">
+          <p className="text--large text--blue SelectedShoeModal__size-text">
             Size:
-            <span className="SelectedShoeModal__size-number bold">
+            <span className="text--large text--blue bold">
               {selectedShoe.size ? ` ${selectedShoe.size}` : ""}
             </span>
             {showError ? (
-              <span className="SelectedShoeModal__error-text">Select Size</span>
+              <span className="SelectedShoeModal__error-text text--small text--red">
+                Select Size
+              </span>
             ) : null}
           </p>
           <Dropdown
@@ -109,7 +111,7 @@ const SelectedShoeModal = () => {
             setShowError={setShowError}
           />
           <p
-            className="text-button SelectedShoeModal__add-bag"
+            className="text-button--large text-button text-button--blue SelectedShoeModal__add-bag"
             onClick={onAddToBagClick}
           >
             Add to bag

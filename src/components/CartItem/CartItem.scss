@@ -54,27 +54,22 @@
       grid-column: 3 / span 1;
     }
   }
-  &__text {
-    font-size: 2rem;
-    color: var(--secondary-blue);
-    @include respondMax(900px) {
-      font-size: 1.6rem;
-    }
-    &--price {
-      grid-column: 2/3;
-      font-weight: 500;
-    }
+  &__price-text {
+    grid-column: 2/3;
   }
+
   &__remove-button {
     grid-column: 3/4;
     justify-self: start;
     align-self: start;
   }
+  /*
   .text-button {
     font-size: 2rem;
-    color: darkgrey;
+    color: var(--grey);
     @include respondMax(900px) {
       font-size: 1.8rem;
     }
   }
+  */
 }

@@ -19,8 +19,8 @@ const CartItem = ({ name, id, quantity, size, totalPrice, img }) => {
       <img src={img} alt={name} className="CartItem__image" />
       <h4 className="CartItem__header">{name}</h4>
       <div className="CartItem__action-group CartItem__action-group--quantity">
-        <p className="CartItem__text">Quantity:</p>
-        <p className="CartItem__text">{quantity}</p>
+        <p className="text--small text--blue">Quantity:</p>
+        <p className="text--small text--blue">{quantity}</p>
         <Dropdown
           color="var(--secondary-blue)"
           array={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
@@ -31,8 +31,8 @@ const CartItem = ({ name, id, quantity, size, totalPrice, img }) => {
       </div>
 
       <div className="CartItem__action-group CartItem__action-group--size">
-        <p className="CartItem__text">Size:</p>
-        <p className="CartItem__text">{size}</p>
+        <p className=" text--small text--blue">Size:</p>
+        <p className="text--small text--blue">{size}</p>
         <Dropdown
           color="var(--secondary-blue)"
           array={[
@@ -60,9 +60,9 @@ const CartItem = ({ name, id, quantity, size, totalPrice, img }) => {
         />
       </div>
 
-      <p className="CartItem__text CartItem__text--price">{`$${totalPrice}`}</p>
+      <p className="text--small text--blue CartItem__price-text">{`$${totalPrice}`}</p>
       <p
-        className="CartItem__remove-button text-button"
+        className="CartItem__remove-button text-button text-button--grey text-button--small"
         onClick={onRemoveClick}
       >
         Remove Shoe
