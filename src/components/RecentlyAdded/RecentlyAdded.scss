@@ -30,6 +30,8 @@
   &__shoe-info {
     display: flex;
     align-self: flex-start;
+    justify-content: center;
+
     @include respondMax(700px) {
       justify-content: space-evenly;
     }
@@ -63,7 +65,7 @@
     flex-direction: column;
     justify-content: center;
     @include respondMax(700px) {
-      margin-left: 0rem;
+      margin-left: 1rem;
     }
   }
   &__button {
@@ -78,7 +80,7 @@
   }
   .text-button {
     position: absolute;
-    bottom: 3%;
+    bottom: 0%;
     left: 50%;
     transform: translatex(-50%);
   }

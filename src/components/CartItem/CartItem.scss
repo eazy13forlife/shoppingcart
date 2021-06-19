@@ -3,28 +3,39 @@
 .CartItem {
   height: 15rem;
   display: grid;
-  grid-template-columns: 20rem repeat(auto-fit, minmax(min-content, 15rem));
+  grid-template-columns: 30rem repeat(auto-fit, minmax(min-content, 15rem));
   padding-bottom: 1.5rem;
-  margin-left: 7rem;
+  padding-left: 7rem;
   border-bottom: 1px solid var(--secondary-blue);
   grid-column-gap: 3rem;
   grid-auto-rows: auto;
-  @include respondMax(1000px) {
-    grid-template-columns: 10rem repeat(auto-fit, minmax(min-content, 15rem));
+
+  @include respondMax(1150px) {
+    grid-template-columns: 20rem repeat(auto-fit, minmax(min-content, 15rem));
   }
 
+  @include respondMax(1000px) {
+    grid-template-columns: 15rem repeat(auto-fit, minmax(min-content, 15rem));
+  }
+  @include respondMax(850px) {
+    grid-template-columns: 20rem repeat(auto-fit, minmax(min-content, 15rem));
+  }
+  @include respondMax(700px) {
+    grid-template-columns: 15rem repeat(auto-fit, minmax(min-content, 15rem));
+  }
   @include respondMax(600px) {
-    margin-left: 4rem;
-    grid-template-columns: 6rem repeat(auto-fit, minmax(min-content, 5rem));
+    grid-row-gap: 1rem;
+    height: auto;
+    grid-template-columns: 12rem repeat(auto-fit, minmax(min-content, 15rem));
   }
+
   @include respondMax(500px) {
-    grid-column-gap: 1.5rem;
-    margin-left: 4rem;
+    grid-column-gap: 1.3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    grid-template-columns: 10rem repeat(2, minmax(min-content, 1fr));
   }
-  @include respondMax(400px) {
-    grid-column-gap: 0.5rem;
-    margin-left: 3rem;
-  }
+
   &__image {
     max-width: 100%;
     max-height: 12rem;
@@ -33,20 +44,34 @@
     grid-row: 1/4;
     justify-self: center;
     padding-right: 1.5rem;
+    @include respondMax(500px) {
+      max-height: 10rem;
+    }
+    @include respondMax(400px) {
+      max-height: 8rem;
+    }
   }
   &__header {
     grid-column: 2/4;
     font-size: 2rem;
     font-weight: 400;
     color: var(--secondary-blue);
+    @include respondMax(500px) {
+      font-size: 1.8rem;
+      grid-column: 2/4;
+    }
   }
   .Dropdown {
     margin-left: -1rem;
   }
   &__action-group {
     display: grid;
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(3, min-content);
     grid-column-gap: 1rem;
+    @include respondMax(500px) {
+      grid-template-columns: repeat(1, minmax(min-content, 1fr));
+      justify-content: center;
+    }
     &--quantity {
       grid-column: 2 / span 1;
     }
@@ -72,4 +97,9 @@
     }
   }
   */
+}
+.combo {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  grid-column-gap: 1rem;
 }

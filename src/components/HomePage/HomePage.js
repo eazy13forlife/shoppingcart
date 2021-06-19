@@ -12,10 +12,10 @@ const HomePage = () => {
         </span>
       </h1>
       <Link to="/shop" className="text-button__link HomePage__shop">
-        <p className="text-button">Shop</p>
+        <p className="text-button text-button--large ">Shop</p>
       </Link>
       <Link to="/cart" className=" text-button__link HomePage__cart">
-        <p className="text-button">Cart</p>
+        <p className="text-button text-button--large">Cart</p>
       </Link>
     </div>
   );

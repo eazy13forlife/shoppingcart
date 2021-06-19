@@ -22,6 +22,9 @@
   }
   &--medium {
     font-size: 2.5rem;
+    @include respondMax(900px) {
+      font-size: 2.2rem;
+    }
   }
   &--large {
     font-size: 3rem;
