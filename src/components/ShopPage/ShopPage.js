@@ -28,7 +28,6 @@ const ShopPage = (props) => {
 
   const [showAddedToCart, setShowAddedToCart] = useState(false);
 
-  /*
   useEffect(() => {
     if (recentlyAdded) {
       setTimeout(() => {
@@ -36,7 +35,7 @@ const ShopPage = (props) => {
       }, 3000);
     }
   }, [recentlyAdded]);
-*/
+
   const renderedShoeList = inventory.map((shoe, index) => {
     return (
       <ShoeCard

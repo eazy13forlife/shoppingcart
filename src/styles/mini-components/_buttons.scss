@@ -63,12 +63,48 @@
   border-radius: 0;
   padding: 1rem 2.5rem;
   border: none;
+  position: relative;
+  z-index: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: all 300ms;
+    z-index: -1;
+  }
   &--blue {
     background-color: var(--secondary-blue);
     color: white;
+    transition: all 300ms;
+    &:after {
+      background-color: var(--white);
+    }
+    &:hover {
+      color: var(--secondary-blue);
+      border: 1px solid var(--secondary-blue);
+    }
   }
   &--white {
     background-color: white;
     color: var(--secondary-blue);
+    transition: all 300ms;
+    &::after {
+      background-color: var(--secondary-blue);
+    }
+    &:hover {
+      color: var(--white);
+      border: 1px solid var(--white);
+    }
+  }
+  &:hover::after {
+    transform: scaleY(1);
+  }
+  &:active {
+    transform: translateY(0.5rem);
   }
 }
