@@ -13,7 +13,9 @@ const Dropdown = ({ color, array, onItemClick, setShowError }) => {
       if (dropdownRef.current && dropdownRef.current.contains(e.target)) {
         return;
       } else {
-        setOpenDropdown(false);
+        if (openDropdown !== null) {
+          setOpenDropdown(false);
+        }
       }
     };
     document.body.addEventListener("click", closeDropdown);
