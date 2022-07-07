@@ -2,6 +2,9 @@
 
 A simple shopping cart application for a shoe store.
 
+## Live Url
+https://shoppingcart-lemon.vercel.app/
+
 ## Images
 ### Store
 ![Screen Shot 2022-06-18 at 2 56 39 AM](https://user-images.githubusercontent.com/72288176/174432738-26a4c136-46d3-4941-9014-09c1bd6bff7e.png)
