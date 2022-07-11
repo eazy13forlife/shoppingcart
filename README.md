@@ -28,6 +28,6 @@ https://shoppingcart-lemon.vercel.app/
 * Clean, minimalist UI design
 
 ## Future implementations
-* A faux payment system can be implemented with React Stripe.
+* A faux payment system can be implemented with React Stripe
 
 
